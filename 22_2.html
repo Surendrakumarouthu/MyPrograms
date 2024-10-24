@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22-2</title>
+</head>
+<body>
+    <script>
+        const students = [
+  { name: 'John', age: 17 },
+  { name: 'Jane', age: 19 },
+  { name: 'Jack', age: 18 },
+];
+
+// Add the 'isAdult' property to each student using 'for...of'
+for (const student of students) {
+  student.isAdult = student.age >= 18; // Add the 'isAdult' property based on the age
+}
+
+// Use 'for...of' to loop over the students and 'for...in' to loop over each student's properties
+for (const student of students) {
+  for (const key in student) {
+    document.write(key + ": " + student[key] + "&nbsp;"); // Print each key-value pair
+  }
+  document.write("<br>"); // Add a blank line after each student
+}
+    </script>
+</body>
+</html>

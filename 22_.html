@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22</title>
+</head>
+<body>
+    <script>
+      
+      const students = [
+  { name: 'John', age: 17 },
+  { name: 'Jane', age: 19 },
+  { name: 'Jack', age: 18 },
+];
+
+const updatedStudents = students.map(student => ({
+  ...student,
+  isAdult: student.age >= 18
+}));
+
+
+
+
+// Loop through the array and create HTML output
+updatedStudents.forEach(student => {
+  document.write("Name: " + student.name + ", Age: " + student.age + ", Is Adult: " + student.isAdult + "<br>");
+});
+
+
+
+    </script>
+
+</body>
+</html>

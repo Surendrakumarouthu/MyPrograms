@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array accessing with Loops</title>
+    <style>
+        h2{
+            color: green;
+        }
+        h4{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <script>
+       
+        document.write("<h2>Difference between For and for...of</h2>");
+    
+    // Explanation of the 'for' loop
+    document.write("<h3>1. For Loop</h3>");
+    document.write("<p>The <code>for</code> loop is a traditional loop used to iterate over an array or perform a block of code a specific number of times. It gives you access to the index of the array elements, which allows you to manipulate the index directly.</p>");
+    document.write("<p>Example:</p>");
+    document.write("<code>var arr = [1, 2, 3];<br>");
+    document.write("for (var i = 0; i < arr.length; i++) {<br>");
+    document.write("&nbsp;&nbsp;console.log(arr[i]);<br>");
+    document.write("}</code>");
+    
+    // Explanation of the 'for...of' loop
+    document.write("<h3>2. For...of Loop</h3>");
+    document.write("<p>The <code>for...of</code> loop is a modern iteration statement that allows you to iterate over iterable objects like arrays, strings, and more. It provides a cleaner syntax and directly gives you the value of each element without needing to access it via an index.</p>");
+    document.write("<p>Example:</p>");
+    document.write("<code>var arr = [1, 2, 3];<br>");
+    document.write("for (var value of arr) {<br>");
+    document.write("&nbsp;&nbsp;console.log(value);<br>");
+    document.write("}</code>");
+    
+    // Summary
+    document.write("<h3>Summary</h3>");
+    document.write("<ul>");
+    document.write("<li><strong>For Loop:</strong> Uses index to access elements.For is external iterator</li>");
+    document.write("<li><strong>For...of Loop:</strong> Directly accesses the values of elements.For..of is internal iterator</li>");
+    document.write("</ul>");
+         document.write("<h2>Using simple for:</h2>");
+        var arr=[1,2,2,4,5,5,6]
+        for(let i=0;i<=arr.length-1;i++){
+            document.write(arr[i]+",")
+        }
+        document.write("<h2>Using for of:</h2>");
+            for(let item of arr){
+                document.write(item+",");
+            }
+
+            document.write("<h2>Sum of elements in Array</h2>");
+            var sum=0;
+            for(let i=0;i<arr.length;i++){
+                sum+=arr[i];
+            }
+            document.write("<h4>Sum of Array:</h4>"+sum)
+            document.write("<h4>length of Array:</h4>"+arr.length+"<br>")
+            document.write(typeof(arr)+"<br>");
+            document.write(typeof(arr[0]))
+    </script>
+    
+</body>
+</html>

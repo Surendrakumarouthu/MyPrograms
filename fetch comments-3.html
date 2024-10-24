@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch-3</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <div class="" id="mydiv"></div>
+    <script>
+        str=`<table border=2><tr><th>Name</th><th>PostID</th><th>ID</th><th>email</th><th>body</th></tr>`
+            fetch("https://jsonplaceholder.typicode.com/comments")
+            .then((resolve)=>resolve.json())
+            .then((data)=>{
+                console.log(data)
+            for(let d of data){
+                str+=`<tr><td>${d.name}</td><td>${d.postId}</td><td>${d.id}</td><td>${d.email}</td><td>${d.body}</td></tr>`
+            }
+        str+=`</table>`
+         document.getElementById("mydiv").innerHTML=str}
+
+            )
+            .catch((err)=>{
+                console.log(err);
+            })
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19-Third-Pattern</title>
+</head>
+<body>
+    <script>
+        var num=5;
+        var row=5;
+        for (let i = num; i >= 1; i--) {  // Decrease i in each iteration to get the required pattern
+    // Inner loop prints numbers in decreasing order for each row
+    for (let j = i; j >= 1; j--) {  // Start from 'i' and decrement until 1
+        document.write(j + " ");  // Print each number with a space
+    }
+    document.write("<br>");  // Move to the next line after each row
+}
+    </script>
+    
+</body>
+</html>

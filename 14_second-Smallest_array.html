@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14_second-Smallest_array</title>
+</head>
+<body>
+    <script>
+        var arr=[-11,3,5,4,0,4,-5]
+        var secondSmallest = Infinity;
+        var smallest = Infinity;
+        for(let i=0;i<arr.length;i++){
+            if(arr[i]<smallest){
+                secondSmallest=smallest;
+                smallest=arr[i];
+
+            }
+            else if(arr[i]<secondSmallest&&arr[i]!=smallest)
+            {
+                secondSmallest=arr[i];
+            }
+           
+        }
+        document.write( secondSmallest);
+    </script>
+    
+</body>
+</html>

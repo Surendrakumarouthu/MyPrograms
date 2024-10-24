@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+</head>
+<body>
+    <script>
+        var arr = [1, 2, 2, 3, 5, 6, 5, 6, 1, 4];
+
+document.write("Original Array:"+ arr+"<br>")
+function countDuplicates(array) {
+  let count = 0;
+  let seen = [];
+
+  for (let element of array) {
+    if (seen.indexOf(element) === -1) {
+      seen.push(element);
+    } else {
+
+      count++;
+    }
+  }
+document.write("Seen:"+seen+"<br>")
+  return count;
+}
+
+
+var duplicateCount = countDuplicates(arr);
+
+
+document.write("Number of duplicate elements: " + duplicateCount);
+
+    </script>
+    
+</body>
+</html>

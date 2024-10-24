@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25</title>
+</head>
+<body>
+    <script>
+   const movies = [
+  { movieName: 'Movie A', movieHero: 'Hero A', movieGenre: 'Action', releaseDate: '2020-01-15' },
+  { movieName: 'Movie B', movieHero: 'Hero B', movieGenre: 'Drama', releaseDate: '2019-06-10' },
+  { movieName: 'Movie C', movieHero: 'Hero C', movieGenre: 'Comedy', releaseDate: '2021-12-25' },
+  { movieName: 'Movie D', movieHero: 'Hero D', movieGenre: 'Horror', releaseDate: '2018-04-05' },
+];
+
+// Sort the movies by releaseDate in ascending order
+movies.sort((a, b) => {
+  // Convert releaseDate to Date objects for comparison
+  const dateA = new Date(a.releaseDate);
+  const dateB = new Date(b.releaseDate);
+
+  // Return the difference between the two dates
+  return dateA - dateB;
+});
+
+// Print the sorted array of movies
+for(let a of movies){
+    for(let b in a){
+        document.write(b+"&nbsp;:&nbsp;"+a[b]+"&nbsp;&nbsp;");
+    }
+    document.write("<br>")
+}
+
+
+    </script>
+</body>
+</html>

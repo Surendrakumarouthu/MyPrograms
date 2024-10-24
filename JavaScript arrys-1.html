@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array
+    </title>
+    <style>
+        h2{
+            color:green;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.write("<p>An array is a collection of different values stored in a single variable. We can store, manipulate, modify, and update the values of an array using the array index. In JavaScript, we don't have strict data types, which is why we can store different types of values in the same array, like 'Surendra', 1, and 20.5.</p>");
+        document.write("<h2>Array Literals (Values Passed During Initialization)</h2>");
+        document.write("<p>An array literal is a way to create an array and assign values to it at the same time. Instead of declaring an array and then filling it with values, you can directly initialize it with values using square brackets <code>[]</code>. Each value is separated by a comma. This method is simple, concise, and commonly used in JavaScript.</p>");
+        document.write("<p>For example: <code>var fruits = ['Apple', 'Banana', 'Mango'];</code></p>");
+       
+        document.write("<p>Here is an example of an array with different types of values: </p>");
+        var arr=['Vicky',12,7,30.25,true];
+        document.write("<p>Array: ",arr,"</h4>");
+        document.write("<h4>Array first item:</h4>"+arr[0]);
+        document.write("<h4>Array second item:</h4>"+arr[1]);
+        document.write("<h4>Array third item:</h4>"+arr[2]);
+        document.write("<h4>Array fourth item:</h4>"+arr[3]);
+        document.write("<h4>Array fifth item:</h4>"+arr[4]+"<br><br>");
+        document.write("Array Length is "+arr.length)
+        document.write("Element at index 0 is: " + arr[0] + "<br>");
+        document.write("Element at index 1 is: " + arr[1] + "<br>");
+        document.write("Element at index 2 is: " + arr[2] + "<br>");
+        document.write("Element at index 3 is: " + arr[3] + "<br>");
+        document.write("Element at index 4 is: " + arr[4] + "<br>");
+        document.write("<h2>Array Constructor (Dynamic Array Creation)</h2>");
+        document.write("<p>An array can also be created dynamically using the <code>Array</code> constructor. This method allows us to create an empty array or specify a size for the array without initially providing values. We can then manually add values later by referencing specific indices in the array.</p>");
+        document.write("<p>For example: <code>var myArray = new Array(3);</code> creates an array with space for 3 elements. Then, we can add values manually:</p>");
+        document.write("<p><code>myArray[0] = 'Surendra';<br>myArray[1] = 42;<br>myArray[2] = true;</code></p>");
+        document.write("<p>In this approach, the values are not assigned at initialization but added later by referencing the array indices.</p>");
+         var arr1=new Array();
+         arr1[0]='Surendra';
+         arr1[1]="Vicky";
+         arr1[2]="Arjun";
+         arr1[3]="Darling";
+         arr1[4]="Virat";
+         document.write("Array1: ",arr1,"<br><br>");
+         document.write("<h2>What if we had't passed values</h2>")
+         var arr2=new Array(5);
+         arr2[0]=1;
+         arr2[1]=2;
+         arr2[2]=3;
+         arr2[4]=5;
+         document.write("Array-2:"+arr2+"like this we will get empty values with commas no null or undefined values")
+      </script>
+      
+</body>
+</html>

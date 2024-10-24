@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Array Methods</title>
+</head>
+<body>
+    <script>
+        document.write("<h2>Common JavaScript Array Methods</h2>");
+
+        // 1. push()
+        document.write("<h3>1. push()</h3>");
+        document.write("<p>The <code>push()</code> method adds one or more elements to the end of an array and returns the new length of the array.</p>");
+        document.write("<p>Example:</p>");
+        document.write("<code>var arr = [1, 2, 3];<br>");
+        document.write("arr.push(4);<br>");
+        document.write("console.log(arr); // Output: [1, 2, 3, 4]</code>");
+
+        // 2. pop()
+        document.write("<h3>2. pop()</h3>");
+        document.write("<p>The <code>pop()</code> method removes the last element from an array and returns that element. This method changes the length of the array.</p>");
+        document.write("<p>Example:</p>");
+        document.write("<code>var arr = [1, 2, 3];<br>");
+        document.write("var lastElement = arr.pop();<br>");
+        document.write("console.log(arr); // Output: [1, 2]<br>");
+        document.write("console.log(lastElement); // Output: 3</code>");
+
+        // 3. shift()
+        document.write("<h3>3. shift()</h3>");
+        document.write("<p>The <code>shift()</code> method removes the first element from an array and returns that element. This method changes the length of the array.</p>");
+        document.write("<p>Example:</p>");
+        document.write("<code>var arr = [1, 2, 3];<br>");
+        document.write("var firstElement = arr.shift();<br>");
+        document.write("console.log(arr); // Output: [2, 3]<br>");
+        document.write("console.log(firstElement); // Output: 1</code>");
+
+        // 4. unshift()
+        document.write("<h3>4. unshift()</h3>");
+        document.write("<p>The <code>unshift()</code> method adds one or more elements to the beginning of an array and returns the new length of the array.</p>");
+        document.write("<p>Example:</p>");
+        document.write("<code>var arr = [2, 3];<br>");
+        document.write("arr.unshift(1);<br>");
+        document.write("console.log(arr); // Output: [1, 2, 3]</code>");
+
+        // 5. splice()
+        document.write("<h3>5. splice()</h3>");
+        document.write("<p>The <code>splice()</code> method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.</p>");
+        document.write("<p>Example:</p>");
+        document.write("<code>var arr = [1, 2, 3, 4];<br>");
+        document.write("arr.splice(1, 2, 5, 6);<br>");
+        document.write("console.log(arr); // Output: [1, 5, 6, 4]</code>");
+        document.write("<p>In this example, <code>arr.splice(1, 2, 5, 6)</code> starts at index 1, removes 2 elements, and adds 5 and 6.</p>");
+
+        // 6. slice()
+        document.write("<h3>6. slice()</h3>");
+        document.write("<p>The <code>slice()</code> method returns a shallow copy of a portion of an array into a new array object selected from <code>start</code> to <code>end</code> (end not included) where <code>start</code> and <code>end</code> represent the index of items in that array.</p>");
+        document.write("<p>Example:</p>");
+        document.write("<code>var arr = [1, 2, 3, 4, 5];<br>");
+        document.write("var newArr = arr.slice(1, 4);<br>");
+        document.write("console.log(newArr); // Output: [2, 3, 4]</code>");
+        document.write("<p>In this example, <code>arr.slice(1, 4)</code> copies elements from index 1 to index 3.</p>");
+
+        // 7. indexOf()
+        document.write("<h3>7. indexOf()</h3>");
+        document.write("<p>The <code>indexOf()</code> method returns the first index at which a given element can be found in the array, or -1 if it is not present.</p>");
+        document.write("<p>Example:</p>");
+        document.write("<code>var arr = [1, 2, 3, 2];<br>");
+        document.write("var index = arr.indexOf(2);<br>");
+        document.write("console.log(index); // Output: 1</code>");
+
+        // 8. lastIndexOf()
+        document.write("<h3>8. lastIndexOf()</h3>");
+        document.write("<p>The <code>lastIndexOf()</code> method returns the last index at which a given element can be found in the array, or -1 if it is not present.</p>");
+        document.write("<p>Example:</p>");
+        document.write("<code>var arr = [1, 2, 3, 2];<br>");
+        document.write("var lastIndex = arr.lastIndexOf(2);<br>");
+        document.write("console.log(lastIndex); // Output: 3</code>");
+
+        // 9. delete
+        document.write("<h3>9. delete</h3>");
+        document.write("<p>The <code>delete</code> operator can be used to remove an element from an array by its index. However, it does not change the length of the array and leaves an <code>undefined</code> hole in its place.</p>");
+        document.write("<p>Example:</p>");
+        document.write("<code>var arr = [1, 2, 3];<br>");
+        document.write("delete arr[1];<br>");
+        document.write("console.log(arr); // Output: [1, undefined, 3]</code>");
+
+        // 10. sort()
+        document.write("<h3>10. sort()</h3>");
+        document.write("<p>The <code>sort()</code> method sorts the elements of an array in place and returns the sorted array. The default sort order is according to string Unicode code points.</p>");
+        document.write("<p>Example:</p>");
+        document.write("<code>var arr = [3, 1, 2];<br>");
+        document.write("arr.sort();<br>");
+        document.write("console.log(arr); // Output: [1, 2, 3]</code>");
+
+        // 11. reverse()
+        document.write("<h3>11. reverse()</h3>");
+        document.write("<p>The <code>reverse()</code> method reverses the elements of an array in place and returns the reversed array.</p>");
+        document.write("<p>Example:</p>");
+        document.write("<code>var arr = [1, 2, 3];<br>");
+        document.write("arr.reverse();<br>");
+        document.write("console.log(arr); // Output: [3, 2, 1]</code>");
+
+        // 12. forEach()
+        document.write("<h3>12. forEach()</h3>");
+        document.write("<p>The <code>forEach()</code> method executes a provided function once for each array element.</p>");
+        document.write("<p>Example:</p>");
+        document.write("<code>var arr = [1, 2, 3];<br>");
+        document.write("arr.forEach(function(element) {<br>");
+        document.write("&nbsp;&nbsp;console.log(element);<br>");
+        document.write("}); // Output: 1, 2, 3</code>");
+
+        // 13. map()
+        document.write("<h3>13. map()</h3>");
+        document.write("<p>The <code>map()</code> method creates a new array populated with the results of calling a provided function on every element in the calling array.</p>");
+        document.write("<p>Example:</p>");
+        document.write("<code>var arr = [1, 2, 3];<br>");
+        document.write("var newArr = arr.map(function(element) {<br>");
+        document.write("&nbsp;&nbsp;return element * 2;<br>");
+        document.write("});<br>");
+        document.write("console.log(newArr); // Output: [2, 4, 6]</code>");
+
+        // 14. filter()
+        document.write("<h3>14. filter()</h3>");
+        document.write("<p>The <code>filter()</code> method creates a new array with all elements that pass the test implemented by the provided function.</p>");
+        document.write("<p>Example:</p>");
+        document.write("<code>var arr = [1, 2, 3, 4];<br>");
+        document.write("var newArr = arr.filter(function(element) {<br>");
+        document.write("&nbsp;&nbsp;return element % 2 === 0;<br>");
+        document.write("});<br>");
+        document.write("console.log(newArr); // Output: [2, 4]</code>");
+
+        // 15. reduce()
+        document.write("<h3>15. reduce()</h3>");
+        document.write("<p>The <code>reduce()</code> method executes a reducer function (that you provide) on each element of the array, resulting in a single output value.</p>");
+        document.write("<p>Example:</p>");
+        document.write("<code>var arr = [1, 2, 3, 4];<br>");
+        document.write("var sum = arr.reduce(function(accumulator, currentValue) {<br>");
+        document.write("&nbsp;&nbsp;return accumulator + currentValue;<br>");
+        document.write("}, 0);<br>");
+        document.write("console.log(sum); // Output: 10</code>");
+    </script>
+</body>
+</html>

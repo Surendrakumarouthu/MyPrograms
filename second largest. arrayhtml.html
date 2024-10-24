@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr=[-300,1,-2,-45,-6,-7,-8,-91,-100,-1]
+        var seconlargest=-Infinity
+        var largest=-Infinity
+        for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > largest) {
+        seconlargest = largest;  
+        largest = arr[i];
+    } else if (arr[i] > seconlargest && arr[i] != largest) {
+        seconlargest = arr[i];
+    }
+}
+        document.write("Second largest number is:"+ seconlargest+"<br>")
+        document.write("the largest number:"+ largest)
+    </script>
+    
+</body>
+</html>

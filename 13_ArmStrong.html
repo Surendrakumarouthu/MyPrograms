@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13-ArmStrong</title>
+</head>
+<body>
+    <script>
+        var num=+prompt("Enter any number");
+        temp=num;
+        var sum=0;
+        var rem=0;
+        var counter=0;
+        while(num!=0){
+            num=parseInt(num/10);
+            counter++
+        }
+        num=temp;
+        document.write("Number of Digits:"+counter+"<br>")
+        while(num!=0){
+            rem=num%10;
+            sum=sum+rem**counter;
+            num=parseInt(num/10);
+        }
+        if(sum==temp){
+            document.write(temp+"is a armstrong number")
+        
+        }
+        else{
+            document.write(temp+"is not a armstrong number")
+        }
+        
+
+    </script>
+    
+</body>
+</html>

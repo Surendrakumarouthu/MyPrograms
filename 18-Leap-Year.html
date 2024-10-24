@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18-Leap-year</title>
+</head>
+<body>
+    <script>
+        var arr=[2016,2020,2018,2024,2000,1700,1600];
+        var leap_year=arr.filter(leap)
+        function leap(year){
+            if(year%400==0 || (year%100!=0 && year%4==0)){
+                return year;
+            }
+        }
+        document.write(leap_year)
+        document.write("<h2>Using Arrow Function</h2>")
+        var leap_year_arrow = arr.filter(year => (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)));
+        document.write(leap_year_arrow)
+        document.write("<h2>Using push Method</h2>")
+        var leaparr=[];
+        for(var i=0;i<arr.length;i++){
+            if(arr[i]%400==0||(arr[i]%100!=0&&arr[i]%4==0)){
+                leaparr.push(arr[i]);
+            }
+        }
+        document.write(leaparr)
+    </script>
+    
+</body>
+</html>

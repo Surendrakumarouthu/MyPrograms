@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Object and Function Methods</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #007BFF;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-left: 5px solid #007BFF;
+        }
+        .example {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Object Methods</h1>
+    
+    <h2>1. Object.keys()</h2>
+    <p>Returns an array of a given object's own enumerable property names.</p>
+    <div class="example">
+        <strong>Example:</strong>
+        <pre>
+const user = { name: "John", age: 30, role: "Developer" };
+console.log(Object.keys(user)); 
+// Output: ["name", "age", "role"]
+        </pre>
+    </div>
+    
+    <h2>2. Object.values()</h2>
+    <p>Returns an array of a given object's own enumerable property values.</p>
+    <div class="example">
+        <strong>Example:</strong>
+        <pre>
+const user = { name: "John", age: 30, role: "Developer" };
+console.log(Object.values(user)); 
+// Output: ["John", 30, "Developer"]
+        </pre>
+    </div>
+
+    <h2>3. Object.entries()</h2>
+    <p>Returns an array of a given object's own enumerable string-keyed property [key, value] pairs.</p>
+    <div class="example">
+        <strong>Example:</strong>
+        <pre>
+const user = { name: "John", age: 30, role: "Developer" };
+console.log(Object.entries(user)); 
+// Output: [["name", "John"], ["age", 30], ["role", "Developer"]]
+        </pre>
+    </div>
+
+    <h2>4. Object.assign()</h2>
+    <p>Copies all enumerable own properties from one or more source objects to a target object.</p>
+    <div class="example">
+        <strong>Example:</strong>
+        <pre>
+const target = { a: 1, b: 2 };
+const source = { b: 4, c: 5 };
+const result = Object.assign(target, source);
+console.log(result); 
+// Output: { a: 1, b: 4, c: 5 }
+        </pre>
+    </div>
+
+    <h2>5. Object.freeze()</h2>
+    <p>Freezes an object, meaning no changes can be made to its properties.</p>
+    <div class="example">
+        <strong>Example:</strong>
+        <pre>
+const obj = { name: "John" };
+Object.freeze(obj);
+obj.name = "Jane";  // This will not change the name
+console.log(obj.name); 
+// Output: "John"
+        </pre>
+    </div>
+
+    <h2>6. Object.seal()</h2>
+    <p>Seals an object, preventing new properties from being added but allowing changes to existing properties.</p>
+    <div class="example">
+        <strong>Example:</strong>
+        <pre>
+const obj = { name: "John" };
+Object.seal(obj);
+obj.age = 25;  // Cannot add new property
+obj.name = "Jane";  // Can modify existing property
+console.log(obj); 
+// Output: { name: "Jane" }
+        </pre>
+    </div>
+
+    <h2>7. Object.create()</h2>
+    <p>Creates a new object with the specified prototype object and properties.</p>
+    <div class="example">
+        <strong>Example:</strong>
+        <pre>
+const person = { greet: function() { console.log("Hello"); } };
+const john = Object.create(person);
+john.name = "John";
+john.greet(); 
+// Output: "Hello"
+        </pre>
+    </div>
+
+    <h1>JavaScript Object Function Methods</h1>
+    
+    <h2>1. Function.prototype.call()</h2>
+    <p>Calls a function with a given `this` value and arguments provided individually.</p>
+    <div class="example">
+        <strong>Example:</strong>
+        <pre>
+function greet() {
+    console.log(`Hello, ${this.name}`);
+}
+const user = { name: "John" };
+greet.call(user); 
+// Output: "Hello, John"
+        </pre>
+    </div>
+
+    <h2>2. Function.prototype.apply()</h2>
+    <p>Similar to `call()`, but arguments are provided as an array.</p>
+    <div class="example">
+        <strong>Example:</strong>
+        <pre>
+function greet(greeting, punctuation) {
+    console.log(`${greeting}, ${this.name}${punctuation}`);
+}
+const user = { name: "John" };
+greet.apply(user, ["Hi", "!"]); 
+// Output: "Hi, John!"
+        </pre>
+    </div>
+
+    <h2>3. Function.prototype.bind()</h2>
+    <p>Creates a new function that, when called, has its `this` keyword set to the provided value.</p>
+    <div class="example">
+        <strong>Example:</strong>
+        <pre>
+function greet() {
+    console.log(`Hello, ${this.name}`);
+}
+const user = { name: "John" };
+const greetUser = greet.bind(user);
+greetUser(); 
+// Output: "Hello, John"
+        </pre>
+    </div>
+
+    <h2>4. Function.prototype.toString()</h2>
+    <p>Returns a string representing the source code of the function.</p>
+    <div class="example">
+        <strong>Example:</strong>
+        <pre>
+function greet() {
+    console.log("Hello");
+}
+console.log(greet.toString()); 
+// Output: function greet() { console.log("Hello"); }
+        </pre>
+    </div>
+
+    <h2>5. Function.prototype.constructor</h2>
+    <p>Returns a reference to the constructor function that created the instance's prototype.</p>
+    <div class="example">
+        <strong>Example:</strong>
+        <pre>
+function Person(name) {
+    this.name = name;
+}
+const john = new Person("John");
+console.log(john.constructor); 
+// Output: function Person(name) { this.name = name; }
+        </pre>
+    </div>
+
+    <h2>Difference Between Object and Function Methods</h2>
+    <p>
+        <strong>Object Methods:</strong> Methods such as <code>Object.keys()</code>, <code>Object.values()</code>, and <code>Object.assign()</code> deal with object properties and their manipulation. These methods are related to managing the data contained within objects.
+    </p>
+    <p>
+        <strong>Function Methods:</strong> Methods like <code>call()</code>, <code>apply()</code>, and <code>bind()</code> are used to control the execution context (the value of `this`) of functions. These methods are useful when you need to explicitly define the object that a function should be bound to or executed with.
+    </p>
+</body>
+</html>

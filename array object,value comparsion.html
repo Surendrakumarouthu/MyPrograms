@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays comparing like object</title>
+    <style>
+        h2{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <script>
+         document.write("<h2>Explanation of Array Comparison</h2>");
+        var arr=[1,2,3,4,5];
+        var arr2=[1,2,3,4,5]
+       // Comparison using == (loose equality)
+       document.write("Using == : " + (arr == arr2) + "<br>"); // false
+        
+        // Comparison using === (strict equality)
+        document.write("Using === : " + (arr === arr2) + "<br>"); // false
+
+        // Explanation
+        // The == operator checks if the values of the two arrays are equal, but it does not
+        // check if they are the same object. In this case, arr and arr2 are two
+        document.write("<p><code> var arr=[1,2,3,4,5]</code></p>")
+        document.write("<p><code> var arr2=[1,2,3,4,5]</code></p>")
+        document.write("<p>Using == : + (arr == arr2) --->false</p>")
+        document.write("<p>Using === : + (arr === arr2) --->false<br>");
+        document.write("<h2>Explanation</h2>");
+        document.write("<p>In JavaScript, arrays are reference types. When you create an array, it is stored in memory, and a variable holds a reference to that memory location.</p>");
+        document.write("<p>When comparing two arrays with <code>==</code> or <code>===</code>, JavaScript checks if both variables reference the same memory location.</p>");
+        document.write("<p>In this case, <code>arr</code> and <code>arr2</code> are two separate arrays stored in different memory locations, even though they have the same content. Hence, both comparisons return <strong>false</strong>.</p>");
+        document.write("<p>If you want to compare the contents of two arrays, you need to check each element individually.</p>");
+    </script>
+    
+</body>
+</html>

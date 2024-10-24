@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24-objects-practice</title>
+</head>
+<body>
+    <script>
+        const employees = [
+  { name: 'Alice', salary: 50000 },
+  { name: 'Bob', salary: 60000 },
+  { name: 'Charlie', salary: 40000 },
+];
+
+
+var minSalary=+prompt("Enter minimum salary")
+var filteredEmployees=employees.filter(employee=>
+    {
+        return employee.salary>minSalary;
+    }
+)
+var sortedEmployees=filteredEmployees.sort((a,b)=>a.salary-b.salary);
+for(let i=0;i<filteredEmployees.length;i++){
+    // document.write(filteredEmployees[i]);
+   document.write(filteredEmployees[i].name+" "+filteredEmployees[i].salary+ "<br> ");
+}
+if(sortedEmployees.length>0){
+    for(let b of sortedEmployees){
+        document.write(b.name+"&nbsp;"+b.salary)
+
+    }
+}
+else{
+    document.write("No employees found");
+}
+    </script>
+    
+</body>
+</html>

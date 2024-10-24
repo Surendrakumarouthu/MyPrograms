@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timing Functions</title>
+</head>
+<body>
+    <h1 id="myh1"></h1> <!-- The first element to update -->
+    <p id="myp1"></p>  <!-- The second element to update -->
+
+    <script>
+      function hello() {
+            var d = new Date();
+            // Use toLocaleDateString to get the local date
+            var localDate = d.toLocaleDateString(); 
+            document.getElementById("myh1").innerHTML = localDate;
+            document.getElementById("myp1").innerHTML = localDate;
+        }
+
+        // Call hello every second (1000 milliseconds)
+        setInterval(hello, 1000);
+    </script>
+    
+</body>
+</html>

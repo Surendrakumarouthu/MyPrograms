@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 Array Methods</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>ES6 Array Methods</h1>
+
+    <h2>1. forEach()</h2>
+    <p>Executes a provided function once for each array element. It does not return anything (undefined), mainly used for iteration or side-effects like logging.</p>
+    <pre>
+const numbers = [1, 2, 3, 4];
+numbers.forEach((num) => {
+    console.log(num);
+});
+// Output: 1 2 3 4
+    </pre>
+
+    <h2>2. map()</h2>
+    <p>Creates a new array by applying a function to each element of the original array. It doesn't modify the original array.</p>
+    <pre>
+const numbers = [1, 2, 3, 4];
+const squared = numbers.map((num) => num * num);
+console.log(squared); // Output: [1, 4, 9, 16]
+    </pre>
+
+    <h2>3. filter()</h2>
+    <p>Creates a new array with all elements that pass a test implemented by the provided function. If an element doesn't satisfy the condition, it is filtered out.</p>
+    <pre>
+const numbers = [1, 2, 3, 4, 5, 6];
+const evenNumbers = numbers.filter((num) => num % 2 === 0);
+console.log(evenNumbers); // Output: [2, 4, 6]
+    </pre>
+
+    <h2>4. findIndex()</h2>
+    <p>Returns the <strong>index</strong> of the first element in the array that satisfies the provided testing function. If no element matches, it returns -1.</p>
+    <pre>
+const numbers = [10, 20, 30, 40];
+const index = numbers.findIndex((num) => num === 30);
+console.log(index); // Output: 2
+    </pre>
+
+    <h2>5. reduce()</h2>
+    <p>Applies a function against an accumulator and each array element (from left to right) to reduce it to a single value.</p>
+    <pre>
+const numbers = [1, 2, 3, 4];
+const sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+console.log(sum); // Output: 10
+    </pre>
+
+    <h2>6. find()</h2>
+    <p>Returns the <strong>first element</strong> in the array that satisfies the provided testing function. If no element matches, it returns undefined.</p>
+    <pre>
+const numbers = [10, 20, 30, 40];
+const found = numbers.find((num) => num > 25);
+console.log(found); // Output: 30
+    </pre>
+
+    <h2>7. some()</h2>
+    <p>Returns true if at least <strong>one</strong> element in the array satisfies the condition in the callback function, otherwise returns false.</p>
+    <pre>
+const numbers = [1, 2, 3, 4];
+const hasEven = numbers.some((num) => num % 2 === 0);
+console.log(hasEven); // Output: true
+    </pre>
+
+    <h2>8. every()</h2>
+    <p>Returns true if <strong>all</strong> elements in the array pass the test implemented by the provided function.</p>
+    <pre>
+const numbers = [2, 4, 6, 8];
+const allEven = numbers.every((num) => num % 2 === 0);
+console.log(allEven); // Output: true
+    </pre>
+
+    <h2>9. sort()</h2>
+    <p>Sorts the elements of an array <strong>in place</strong> (modifies the original array). By default, it converts elements to strings and compares them lexicographically.</p>
+    <pre>
+const numbers = [30, 5, 100, 20];
+const sorted = numbers.sort((a, b) => a - b);
+console.log(sorted); // Output: [5, 20, 30, 100]
+    </pre>
+
+    <h2>10. concat()</h2>
+    <p>Merges two or more arrays into a new array, without changing the existing arrays.</p>
+    <pre>
+const arr1 = [1, 2];
+const arr2 = [3, 4];
+const combined = arr1.concat(arr2);
+console.log(combined); // Output: [1, 2, 3, 4]
+    </pre>
+
+</body>
+</html>

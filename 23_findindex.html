@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>23_findindex</title>
+</head>
+<body>
+    <script>
+       var books = [
+  { name: "book1", price: 100, author: "Author1" },
+  { name: "book2", price: 200, author: "Author2" },
+  { name: "book3", price: 300, author: "Author3" },
+];
+
+var BookTitlebyUser = prompt("Enter a book title");
+var bookAuthorbyUser = prompt("Enter author name");
+
+// var bookIndex = books.findIndex(book => {
+//     return book.name === BookTitlebyUser && book.author === bookAuthorbyUser
+// }
+// //   book.name === BookTitlebyUser && book.author === bookAuthorbyUser
+// );
+var bookIndex=books.findIndex(Bookfunction);
+function Bookfunction(book) {
+    return book.name === BookTitlebyUser && book.author === bookAuthorbyUser
+}
+if (bookIndex === -1) {
+  document.write("Book not found");
+} else {
+  document.write("Book found at index " + bookIndex);
+}
+
+    </script>
+</body>
+</html>

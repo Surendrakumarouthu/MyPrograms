@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        students = [
+  { name: 'John', age: 17 },
+  { name: 'Jane', age: 19 },
+  { name: 'Jack', age: 18 },
+];
+var newStudents=students.map((arr)=>{
+    if(arr.age>=18){
+        arr.isAdult=true;
+        }
+        else{
+            arr.isAdult=false;
+        }
+        return arr;
+    });
+console.log(newStudents)
+// for(student of students){
+//     student.isAdult=student.age>=18;
+// }
+// for(student of students){
+//     for(key in student){
+//         document.write(key+":"+student[key])
+//     }
+// }
+// console.log(students)
+
+
+    </script>
+    
+</body>
+</html>

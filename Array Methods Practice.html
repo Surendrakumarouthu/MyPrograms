@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods Practice</title>
+    <style>
+        h2{
+            color:red;
+        }
+        h3{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.write("<h2>Array Methods</h2>")
+        document.write("<h3>Push() method:</h3>")
+        var arr=[1,2,3];
+        arr.push(4,5);
+        document.write(arr)
+        document.write("<h3>pop() method:</h3>")
+        lastelement=arr.pop();
+        document.write(arr+"<br><br>")
+        document.write(lastelement)
+        var firstElement=arr.shift();
+        document.write("<h3>shift() method:</h3>"+firstElement)
+        arr.unshift(1,7);
+        document.write("<h3>unshift method:</h3>"+arr)
+        arr.splice(1,2,50,60,50);
+        document.write("<h3>Splice method:</h3>"+arr)
+        arr.slice(2,5)
+        document.write("<h3>Slice method</h3>"+arr)
+        arr.indexOf(4)
+        document.write("<h3>indexOf:"+arr.indexOf(50))
+            arr.lastIndexOf(4)
+            document.write("<h3>lastIndexOf:"+arr.lastIndexOf(50))
+                delete arr[2];
+                document.write("<h3>delete method:</h3>"+arr)
+                document.write("<h3>Sort Method:</h3>"+arr.sort())
+                document.write("<h3>Reverse Method:</h3>"+arr.reverse());
+                </script>
+
+</body>
+</html>

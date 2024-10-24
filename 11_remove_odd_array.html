@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11-Remove-odd-Array</title>
+    <style>
+        h2{
+            text-align: center;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.write("<h2>Using For Loop</h2>")
+        var arr=[1,2,3,4,5,6];
+        var evenarr=[];
+        for(let i=0;i<arr.length;i++){
+            if(arr[i]%2==0){
+                evenarr.push(arr[i]);
+
+                
+            }
+                }
+        document.write("Array without odd numbers :"+ evenarr)
+
+        document.write("<h2>Using Filter</h2>")
+        var num=[10,2,0,2,75,6,7.9,8,9,11]
+        var even=num.filter(evenNum);
+        function evenNum(number){
+            return number % 2 === 0;
+        }
+        document.write("Using Filter this array: "+ even)
+        document.write("<h2>Using Filter-Arrow Function</h2>")
+        var arr1=[10,20,30,55,35,65]
+        var evenarrow=arr1.filter((num)=>num%2==0);
+        document.write("Using Filter with Arrow:"+evenarrow)
+        document.write("<h2>Using splice method</h2>")
+        var arr2=[1,2,3,4,5,6];
+        for(let i=0;i<=arr2.length;i++){
+            if(arr2[i]%2!=0){
+                arr2.splice(i,1);
+            }
+        }
+        document.write("with splice:"+arr2)
+    </script>
+</body>
+</html>

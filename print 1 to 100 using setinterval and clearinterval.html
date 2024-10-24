@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var i=0
+        function print(){
+            i++;
+            if(i<=100){
+                document.write(i+"<br>")
+            }
+            else{
+                clearInterval(myInterval)
+            }
+
+        }
+        var myInterval=setInterval(print,100)
+    </script>
+</body>
+</html>

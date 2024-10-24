@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7</title>
+</head>
+<body>
+    <script>
+        var arr=[1,2,3,4,65,47,5,6];
+       
+        var uniquearr=removeduplicate(arr)
+        function removeduplicate(array){
+            return array.filter((Element,index)=>{
+                 return array.indexOf(Element)==index;
+            })
+        }
+        document.write(uniquearr)
+       </script>
+</body>
+</html>

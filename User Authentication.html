@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication</title>
+  
+</head>
+<body>
+  
+    
+    <script>
+        var username=prompt()
+        var password=prompt()
+        var confirmpassword=password.slice(0,3).concat("@123")
+        // document.write(confirmpassword)
+        var confirmUsername=username;
+        if(username===confirmUsername && password===confirmpassword){
+            alert("Authentication Success")
+        }
+        else{
+            alert("Authentication Failed")
+        }
+       
+
+    </script>
+    
+</body>
+</html>

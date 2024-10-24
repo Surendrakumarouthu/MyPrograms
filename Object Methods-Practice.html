@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #f2f2f2;
+           
+
+        }
+        p{
+            font-size: 18px;
+
+        }
+        strong{
+            font-size: 26px!important;
+            color: red!important;
+            font-weight: 800;
+
+        }
+        strong::before{
+            content: ' ';
+        }
+        strong::after{
+            content: ' ';
+        }
+    </style>
+</head>
+<body>
+    <script>
+       
+        document.write(`<p>In this Object We will just creating function to get the  fullname,But when we use the object methods like Apply,call,Bind these methods borrow a function from other object,So we can use these methods to call the function of other object</p>`)
+        document.write(`<p> <strong>apply </strong>function is borrow a function takes from another object but only takes only one parameter but we can Assign more than one values using <strong>Call </strong>Method this call method takes multiple or single value in the form  of Array.But When we comes to the<strong> Bind</strong>Method just works like call method but it returns the reference of the function</p> `)
+        var user={
+            firstname:"Surendra kumar",
+            lastname:"Routhu",
+            fullname:function(city){
+                return this.firstname + "&nbsp;"+this.lastname;
+            }
+        }
+        document.write(user.fullname())
+         var user2={
+        firstname: "Vicky",
+        lastname: "Routhu",
+
+    }
+    var user3={
+        firstname: "Raj",
+        lastname: "Routhu",
+    }
+    document.write(user.fullname.call(user2));document.write("<p>Here Full Name takes from user2 Object</p>")
+    document.write(user.fullname.apply(user3,["Hyderabad"]));document.write("<p>Here Full Name takes from user3</p>");
+    var user4=user.fullname.bind(user3);
+    document.write(user4("Hyderabad"));document.write("<p>Here Full Name takes from user4</p>");
+    
+    </script>
+</body>
+</html>

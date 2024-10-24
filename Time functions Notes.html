@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Timing Functions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript Timing Functions</h1>
+
+    <div class="section">
+        <h2>Introduction</h2>
+        <p>In JavaScript, timing functions allow us to execute code after a specified time or at repeated intervals. They are useful for scheduling tasks like animation, updates, or delayed responses. The main timing functions are:</p>
+        <ul>
+            <li><code>setTimeout()</code> - Executes a function after a delay.</li>
+            <li><code>setInterval()</code> - Repeatedly executes a function at regular intervals.</li>
+            <li><code>clearTimeout()</code> - Cancels a <code>setTimeout()</code> operation.</li>
+            <li><code>clearInterval()</code> - Cancels a <code>setInterval()</code> operation.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>setTimeout()</h2>
+        <p>The <code>setTimeout()</code> function is used to delay the execution of a function. It takes two arguments:</p>
+        <ul>
+            <li>The function to execute.</li>
+            <li>The delay in milliseconds (1000 ms = 1 second).</li>
+        </ul>
+        <h3>Syntax:</h3>
+        <code>setTimeout(function, delay);</code>
+        <h3>Example:</h3>
+        <p>This example will display a message after 3 seconds:</p>
+        <button id="timeoutButton">Click me for setTimeout example</button>
+        <p id="timeoutExample"></p>
+        <script>
+            document.getElementById("timeoutButton").addEventListener("click", function() {
+                setTimeout(function() {
+                    document.getElementById("timeoutExample").innerHTML = "3 seconds passed!";
+                }, 3000);
+            });
+        </script>
+    </div>
+
+    <div class="section">
+        <h2>setInterval()</h2>
+        <p>The <code>setInterval()</code> function is used to repeatedly execute a function at specified intervals. It continues to execute until it is stopped with <code>clearInterval()</code>.</p>
+        <h3>Syntax:</h3>
+        <code>setInterval(function, interval);</code>
+        <h3>Example:</h3>
+        <p>This example will update a timer every second:</p>
+        <p>Timer: <span id="timer">0</span> seconds</p>
+        <button id="stopTimer">Stop Timer</button>
+        <script>
+            let seconds = 0;
+            let interval = setInterval(function() {
+                seconds++;
+                document.getElementById("timer").innerHTML = seconds;
+            }, 1000);
+
+            document.getElementById("stopTimer").addEventListener("click", function() {
+                clearInterval(interval);
+                document.getElementById("stopTimer").innerHTML = "Timer stopped";
+            });
+        </script>
+    </div>
+
+    <div class="section">
+        <h2>clearTimeout() and clearInterval()</h2>
+        <p><code>clearTimeout()</code> and <code>clearInterval()</code> are used to cancel a scheduled <code>setTimeout()</code> or <code>setInterval()</code> respectively.</p>
+        <h3>clearTimeout() Example:</h3>
+        <p>This example will cancel a delayed message if the "Cancel" button is clicked before the delay finishes:</p>
+        <button id="startMessage">Start delayed message</button>
+        <button id="cancelMessage">Cancel delayed message</button>
+        <p id="message"></p>
+        <script>
+            let timeoutId;
+            document.getElementById("startMessage").addEventListener("click", function() {
+                timeoutId = setTimeout(function() {
+                    document.getElementById("message").innerHTML = "This message was delayed by 5 seconds!";
+                }, 5000);
+            });
+
+            document.getElementById("cancelMessage").addEventListener("click", function() {
+                clearTimeout(timeoutId);
+                document.getElementById("message").innerHTML = "The delayed message was canceled!";
+            });
+        </script>
+
+        <h3>clearInterval() Example:</h3>
+        <p>In the above timer example (under <code>setInterval()</code>), the timer can be stopped using <code>clearInterval()</code> when the "Stop Timer" button is clicked.</p>
+    </div>
+
+    <div class="section">
+        <h2>Conclusion</h2>
+        <p>Timing functions in JavaScript provide a powerful way to schedule code execution after a delay or at regular intervals. They are essential in tasks like animations, games, updating UI, and more. Remember to always use <code>clearTimeout()</code> or <code>clearInterval()</code> when needed to prevent unwanted behavior.</p>
+    </div>
+
+</body>
+</html>

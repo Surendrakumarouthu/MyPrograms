@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <script>
+         function Mobile(mobilename,mobileprice,mobilecompany,mobileReleaseDate){
+            this.mobilename=mobilename;
+            this.mobileprice=mobileprice;
+            this.mobilecompany=mobilecompany
+            this.mobileReleaseDate=mobileReleaseDate;
+
+        }
+        let m1 = new Mobile("iPhone 14", 999, "Apple", "2023-09-14");
+         let m2 = new Mobile("Galaxy S23", 849, "Samsung", "2023-02-01");
+         let m3 = new Mobile("Pixel 7", 599, "Google", "2022-10-13");
+         var minPrice=prompt("Enter Minimum Price")
+         for(let a of mobile){
+            str=`<div class="col-md-3>"`
+                str+=`<div class="card">`
+                    str+=`<div class="card-head">`
+                    str+=`<h5 class="card-title">${a.mobilename}</h5>`
+                    str+=`</div>`
+                    str+=`<div class="card-body">`
+                    str+=`<p class="card-text">Price: ${a.mobileprice}</p>`
+                    str+=`<p class="card-text">Company: ${a.mobilecompany}</p>`
+                    str+=`<p class="card-text">Release:${a.mobileReleaseDate}</p>`
+                     str+=`</div>`
+                      str+=`</div>`
+
+              
+         }
+         document.write(str)
+       
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class MyFam{
+            constructor(){
+
+            }
+            print(){
+                document.write("Hello, I am a Routhu family member"+"<br>");
+            }
+
+            
+        }
+        class Routhu extends MyFam{
+            // constructor(){
+            //     super();
+            // }
+            print(){
+                super.print();
+                document.write("Hi from Child Class")
+            }
+
+        }
+        let r2=new Routhu();
+        r2.print();
+    </script>
+</body>
+</html>

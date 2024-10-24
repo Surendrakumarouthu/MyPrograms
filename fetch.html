@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch ApI</title>
+    <style>
+        table,th,tr,td{
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <div class="" id="mydiv"></div>
+    <script>
+        str=`<table border=1><tr><th>Name</th><th>ID</th><th>Email</th></tr>`
+        // Fetch API
+        fetch("https://jsonplaceholder.typicode.com/users")
+        .then((res)=>res.json())
+        .then((data)=>{
+            console.log(data)
+          for(b of data){
+          str+=`<tr><td>${b.name}</td><td>${b.id}</td><td>${b.email}</td></tr>`
+          }
+          str+=`</table>`
+          document.getElementById("mydiv").innerHTML=str
+        }
+        )
+        .catch((err)=>{
+            console.log(err)
+        })
+
+    </script>
+    
+</body>
+</html>

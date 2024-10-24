@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var name=prompt("Enter your name")
+        var age=prompt("Enter your age")
+         var city=prompt("Enter Your City")
+        class Domainclass{
+            constructor(name,age,city){
+                this.name=name;
+                this.age=age;
+                this.city=city;
+            }
+            getDetails(){
+                return `Hi Mr.${this.name} Your age is ${this.age} from ${this.city}`
+            }
+        }
+        let d1=new Domainclass("Surendra",21,"Parvathipuram");
+        let d2=new Domainclass(name,age,city)
+     document.write( d1.getDetails())
+     
+     document.write(d2.getDetails())
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+<body>
+    <script>
+        var user=new Map();
+        user.set("name","Jhon")
+        user.set("age",25)
+        user.set(true,"Graduate")
+        document.write(user.get("name")+"<br>")
+        document.write(user.get(true)+"<br>")
+        for(let [k,v] of user){
+            document.write(k+":"+v+"<br>")
+        }
+
+        function Mobile(mobilename, mobileprice, mobilecompany, mobileReleaseDate) {
+    this.mobilename = mobilename;
+    this.mobileprice = mobileprice;
+    this.mobilecompany = mobilecompany;
+    this.mobileReleaseDate = mobileReleaseDate;
+}
+
+let m1 = new Mobile("iPhone 14", 999, "Apple", "2023-09-14");
+let m2 = new Mobile("Galaxy S23", 849, "Samsung", "2023-02-01");
+let m3 = new Mobile("Pixel 7", 599, "Google", "2022-10-13");
+
+var Mobiles = [m1, m2, m3];
+
+
+        for(let a of Mobiles){
+            document.write(a+":"+Mobiles[a]+"<br>")
+        }
+    </script>
+    
+</body>
+</html>

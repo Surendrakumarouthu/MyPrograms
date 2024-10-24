@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var username=prompt();
+        var password=prompt()
+        var confirmpassword=password.slice(0,3).concat("@123");
+        var confirmuser=username;
+        if (username==confirmuser && password==confirmpassword) {
+            alert("Login Success");
+
+        }
+        else{
+            alert("Invalid username or password");
+        }
+
+    </script>
+    
+</body>
+</html>

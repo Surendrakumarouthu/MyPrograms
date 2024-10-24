@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>average of array</title>
+</head>
+<body>
+    <script>
+        var arr=[20,5,4,8,69,7]
+        var sum=0;
+        count=0;
+        average=0;
+        for(var i=0;i<arr.length;i++){
+            sum+=arr[i];
+            count++;
+           
+        }
+        average=sum/count;
+        document.write("Sum of elements in array:"+sum+"<br>")
+        document.write("no of elements in array:"+count+"<br>")
+        document.write("Avrage elements in given array:"+average)
+
+    </script>
+    
+</body>
+</html>

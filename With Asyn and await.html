@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async and await</title>
+</head>
+<body>
+   <script>
+     let mypromise=new Promise(function(resolve,reject)
+     {
+        setTimeout(()=>{
+            resolve("Hello World")
+        },20000)
+
+     })
+     async function myfun(){
+        let res=await mypromise
+        document.write(res)
+        document.write("How Are you Darling...!")
+     }
+     myfun()
+   </script>
+    
+</body>
+</html>

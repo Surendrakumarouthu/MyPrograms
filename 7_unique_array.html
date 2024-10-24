@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unique Array</title>
+</head>
+<body>
+    <script>
+        var arr=[1,2,3,4,56,56,7]
+        var uniquearr=removedupliactes(arr);
+        function removedupliactes(num){
+            return num.filter((Element,index)=>{
+                return num.indexOf(Element)==index
+            })
+        }
+        document.write(uniquearr)
+    </script>
+    
+</body>
+</html>

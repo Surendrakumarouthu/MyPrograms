@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions in JavaScript</title>
+</head>
+<body>
+    <script>
+        document.write("<h2>Arrow Functions in JavaScript</h2>");
+
+        // 1. Syntax of Arrow Functions
+        document.write("<h3>1. Syntax of Arrow Functions</h3>");
+        document.write("<p>Arrow functions provide a concise syntax for writing functions. Here's the basic syntax:</p>");
+        document.write("<code>(param1, param2, ...) => expression</code>");
+        document.write("<p>If there is only one parameter, the parentheses can be omitted:</p>");
+        document.write("<code>param => expression</code>");
+        document.write("<p>If there are no parameters, you need to use empty parentheses:</p>");
+        document.write("<code>() => expression</code>");
+
+        // Example 1: Simple Arrow Function
+        document.write("<h3>2. Simple Arrow Function Example</h3>");
+        const greet = (name) => "Hello, " + name;
+        document.write("<p><code>const greet = (name) => 'Hello, ' + name;</code></p>");
+        document.write("<p>Calling <code>greet('Surendra')</code> returns: " + greet('Surendra') + "</p>");
+
+        // 2. No need for 'function' keyword
+        document.write("<h3>3. No Need for 'function' Keyword</h3>");
+        document.write("<p>Unlike traditional functions, arrow functions don't require the <code>function</code> keyword.</p>");
+        document.write("<code>const add = (a, b) => a + b;</code><br>");
+        const add = (a, b) => a + b;
+        document.write("<p>Calling <code>add(5, 10)</code> returns: " + add(5, 10) + "</p>");
+
+        // 3. Implicit return
+        document.write("<h3>4. Implicit Return</h3>");
+        document.write("<p>If the function body contains only a single expression, arrow functions implicitly return the result without needing the <code>return</code> keyword.</p>");
+        document.write("<p>Example:</p>");
+        document.write("<code>const square = n => n * n;</code><br>");
+        const square = n => n * n;
+        document.write("<p>Calling <code>square(4)</code> returns: " + square(4) + "</p>");
+
+        // 4. Arrow functions do not bind 'this'
+        document.write("<h3>5. Arrow Functions Do Not Bind 'this'</h3>");
+        document.write("<p>Arrow functions don't have their own <code>this</code>. They inherit <code>this</code> from the enclosing scope.</p>");
+        document.write("<p>Example:</p>");
+        // const person = {
+        //     name: "Surendra",
+        //     sayName: function() {
+        //         setTimeout(() => {
+        //             document.write("<p>My name is " + this.name + "</p>");
+        //         }, 1000);
+        //     }
+        // };
+        // person.sayName(); // My name is Surendra after 1 second
+
+        // 5. No arguments object
+        document.write("<h3>6. No 'arguments' Object</h3>");
+        document.write("<p>Arrow functions do not have an <code>arguments</code> object. If you need it, use regular functions.</p>");
+        const sumArgs = () => {
+            document.write("<p>Arrow functions do not have 'arguments'</p>");
+        };
+        sumArgs();
+
+        // Example with 'this' in regular vs arrow function
+        document.write("<h3>7. Example: 'this' in Arrow Function vs Regular Function</h3>");
+        const obj = {
+            traditionalFunc: function() {
+                document.write("<p>Traditional function <code>this</code> refers to the object itself.</p>");
+                document.write("<p>Traditional function <code>this</code> is: " + this + "</p>");
+            },
+            arrowFunc: () => {
+                document.write("<p>Arrow function <code>this</code> is inherited from its surrounding context, usually the global object.</p>");
+                document.write("<p>Arrow function <code>this</code> is: " + this + "</p>");
+            }
+        };
+        obj.traditionalFunc();
+        obj.arrowFunc();
+
+        // Conclusion
+        document.write("<h3>Conclusion</h3>");
+        document.write("<p>Arrow functions provide a shorter syntax and behave differently in terms of the <code>this</code> keyword. However, they have some limitations, such as not having their own <code>this</code> or <code>arguments</code> object.</p>");
+    </script>
+</body>
+</html>

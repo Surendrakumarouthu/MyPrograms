@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .start{
+            background-color: green;
+            color: #ffffff;
+           
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            margin: 20px;
+            border-top-left-radius:30% ;
+            border-bottom-right-radius:30% ;
+
+        }
+        .stop{
+            background-color: red;
+            color: #ffffff;
+        
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            margin: 15px;
+            border-top-left-radius:30% ;
+            border-bottom-right-radius:30% ;
+
+        }
+        .parent{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 700px;
+            flex-direction: column;
+            border: 1px solid green;
+            background-color: black;
+            color: #ffffff;
+        }
+        .divparent{
+            display: flex;
+            flex-direction: column;
+        }
+        #h1{
+            color:#ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+
+    <button onclick="starttime()" class="start">Start</button>
+    <button onclick="stoptimer()" class="stop">Stop</button>
+    <div class="divtime"><h1 id="myh1"></h1></div>
+</div>
+    <script>
+        var myInterval;
+        function starttime(){
+            myInterval = setInterval(hello, 1000);
+        }
+    
+        function stoptimer(){
+            clearInterval(myInterval);
+        }
+    
+        var sec = 0, min = 0, hour = 0;
+        
+        function hello(){
+            sec++;
+            
+            if (sec == 60) {
+                min++;
+                sec = 0;
+            }
+            if (min == 60) {
+                hour++;
+                min = 0;
+                sec = 0;
+            }
+            secstr=sec.toString();
+            minstr=min.toString();
+            hourstr=hour.toString();
+            document.getElementById("myh1").innerHTML = `${hourstr.padStart(2,"0")}:${minstr.padStart(2,"0")}:${secstr.padStart(2,"0")}`;
+        }
+    </script>
+    
+
+    </script>
+</body>
+</html>

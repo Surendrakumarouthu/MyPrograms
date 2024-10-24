@@ -1,0 +1,104 @@
+1. Extract Unique Categories from Products
+Given an array of product objects, extract a unique list of product categories and sort them alphabetically.
+
+const products = [
+  { productName: 'Laptop', category: 'Electronics', price: 1200, brand: 'Brand A', stock: 30 },
+  { productName: 'Phone', category: 'Electronics', price: 800, brand: 'Brand B', stock: 50 },
+  { productName: 'Shirt', category: 'Apparel', price: 30, brand: 'Brand C', stock: 100 },
+  { productName: 'Sneakers', category: 'Footwear', price: 60, brand: 'Brand D', stock: 25 },
+  { productName: 'Coffee Maker', category: 'Home Appliances', price: 100, brand: 'Brand E', stock: 20 }
+];
+
+2. Calculate Average Rating of Movies
+Given an array of movie objects, calculate the average rating of all movies and return it as a string with two decimal places.
+
+
+const movies = [
+  { title: 'Movie A', rating: 7.5, director: 'Director A', genre: 'Action', year: 2020 },
+  { title: 'Movie B', rating: 8.2, director: 'Director B', genre: 'Drama', year: 2019 },
+  { title: 'Movie C', rating: 6.9, director: 'Director C', genre: 'Comedy', year: 2021 },
+  { title: 'Movie D', rating: 9.0, director: 'Director D', genre: 'Horror', year: 2018 }
+];
+
+3. Format Names of Authors
+Given an array of author objects, format each author's name to be in the format "Last, First" and return a new array with the formatted names.
+
+const authors = [
+  { firstName: 'Jane', lastName: 'Austen', nationality: 'British', birthYear: 1775, books: 6 },
+  { firstName: 'Mark', lastName: 'Twain', nationality: 'American', birthYear: 1835, books: 28 },
+  { firstName: 'George', lastName: 'Orwell', nationality: 'British', birthYear: 1903, books: 6 }
+];
+
+4. Count Occurrences of Keywords in Book Titles
+Given an array of book objects, count the occurrences of a specific keyword in the titles and return the count.
+const books = [
+  { title: 'JavaScript: The Good Parts', author: 'Douglas Crockford', pages: 176, year: 2008, genre: 'Programming' },
+  { title: 'Eloquent JavaScript', author: 'Marijn Haverbeke', pages: 472, year: 2018, genre: 'Programming' },
+  { title: 'JavaScript: The Definitive Guide', author: 'David Flanagan', pages: 1096, year: 2020, genre: 'Programming' }
+];
+
+// Keyword: 'JavaScript'
+
+5. Find Top Three Highest Salaries
+Given an array of employee objects, find the top three highest salaries and return their names and salaries as an array of objects.
+
+
+const employees = [
+  { name: 'Alice', salary: 60000, department: 'Engineering', yearsAtCompany: 5, location: 'New York' },
+  { name: 'Bob', salary: 75000, department: 'Marketing', yearsAtCompany: 3, location: 'Los Angeles' },
+  { name: 'Charlie', salary: 50000, department: 'Engineering', yearsAtCompany: 4, location: 'Chicago' },
+  { name: 'David', salary: 80000, department: 'HR', yearsAtCompany: 2, location: 'San Francisco' },
+  { name: 'Eva', salary: 70000, department: 'Engineering', yearsAtCompany: 1, location: 'New York' }
+];
+
+6. Create a List of Courses with Duration in Hours
+Given an array of course objects, convert the duration from minutes to hours and return a new array with the updated duration.
+
+const courses = [
+  { title: 'Web Development', duration: 120, instructor: 'John Doe', level: 'Intermediate', category: 'Programming' }, // in minutes
+  { title: 'Data Science', duration: 180, instructor: 'Jane Smith', level: 'Advanced', category: 'Data' },
+  { title: 'Machine Learning', duration: 240, instructor: 'Alice Johnson', level: 'Advanced', category: 'AI' }
+];
+
+7. Merge Student Records
+
+Given two arrays of student objects, merge them into one array while ensuring there are no duplicate entries based on student ID.
+
+const students1 = [
+  { id: 1, name: 'John Doe', age: 20, major: 'Computer Science', GPA: 3.5 },
+  { id: 2, name: 'Jane Smith', age: 22, major: 'Mathematics', GPA: 3.8 }
+];
+
+const students2 = [
+  { id: 2, name: 'Jane Smith', age: 22, major: 'Mathematics', GPA: 3.8 },
+  { id: 3, name: 'Jack Johnson', age: 21, major: 'Physics', GPA: 3.6 }
+];
+
+
+8. Transform Movie Descriptions
+Given an array of movie objects, transform the description of each movie to replace "the" with "THE" and return the updated descriptions.
+
+const movies = [
+  { title: 'The Matrix', description: 'A computer hacker learns about THE true nature of his reality.', director: 'Wachowskis', genre: 'Sci-Fi', year: 1999 },
+  { title: 'The Shawshank Redemption', description: 'Two imprisoned men bond over a number of years in THE Shawshank prison.', director: 'Frank Darabont', genre: 'Drama', year: 1994 },
+  { title: 'The Godfather', description: 'An organized crime dynasty\'s aging patriarch transfers control to his reluctant son.', director: 'Francis Ford Coppola', genre: 'Crime', year: 1972 }
+];
+
+
+9. Get All Unique Tags from Blog Posts
+Given an array of blog post objects, extract all unique tags and return them as a sorted array.
+
+const blogPosts = [
+  { title: 'Post 1', tags: ['JavaScript', 'Programming'], author: 'Alice', date: '2024-10-01', views: 120 },
+  { title: 'Post 2', tags: ['Java', 'Programming'], author: 'Bob', date: '2024-10-02', views: 80 },
+  { title: 'Post 3', tags: ['Web Development', 'JavaScript'], author: 'Charlie', date: '2024-10-03', views: 150 }
+];
+
+10. Generate Full Address from User Data
+Given an array of user objects, generate a full address string for each user and return a new array of full addresses.
+
+const users = [
+  { name: 'Alice', street: '123 Main St', city: 'New York', zip: '10001', country: 'USA' },
+  { name: 'Bob', street: '456 Elm St', city: 'Los Angeles', zip: '90001', country: 'USA' },
+  { name: 'Charlie', street: '789 Maple Ave', city: 'Chicago', zip: '60601', country: 'USA' }
+];

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array ES6 MEthods</title>
+</head>
+<body>
+    <script>
+        // Array ES6 Methods
+        var numbers=[1,2,3,4,5,6]
+    numbers.forEach((num)=>document.write(num*num+"<br>"))
+    numbers.forEach(squre)
+    function squre(i){
+    document.write(i*i)
+    document.write("<br>")
+    }
+
+    //map()
+    // var number2=numbers.map((num)=>document.write(num*3))
+    // document.write(number2)
+  
+const squared = numbers.map((num) => {
+    return num * num
+});
+document.write(squared+"<br>"); // Output: [1, 4, 9, 16]
+const numbers3=[1,7,8,92,5,4,5]
+var even=numbers3.filter((num)=>{
+    return num%2==0
+})
+document.write(even+"<br>")
+//findIndex
+var res=numbers.findIndex((num)=>num%2==0)
+document.write(res+"<br>")
+const index=numbers.findIndex(prime)
+function prime(num){
+    if(num%2==0){
+        return num
+    }
+}
+document.write(index+"<br>")
+
+var found=numbers.find((num)=>num%2==0)
+document.write(found)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24-Object</title>
+</head>
+<body>
+    <script>
+        const employees = [
+  { name: 'Alice', salary: 50000 },
+  { name: 'Bob', salary: 60000 },
+  { name: 'Charlie', salary: 40000 },
+];
+
+
+var minSalary = +prompt("Enter the minimum salary:");
+
+
+
+
+var filteredEmployees = employees.filter(employee => employee.salary > minSalary);
+
+
+var sortedEmployees = filteredEmployees.sort((a, b) => a.salary - b.salary);
+
+
+if (sortedEmployees.length > 0) {
+  sortedEmployees.forEach(employee => {
+    document.write(employee.name + "<br>");
+  });
+} else {
+  document.write("No employees found who earn more than " + minSalary);
+} 
+    </script>
+</body>
+</html>

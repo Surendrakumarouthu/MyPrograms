@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inner HTML Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #content {
+            border: 1px solid #333;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript innerHTML Example</h1>
+
+    <div id="content">
+        This is the original content.
+    </div>
+
+    <button onclick="changeContent()">Change Content</button>
+
+    <script>
+        function changeContent() {
+            // Select the div element using its ID
+            const contentDiv = document.getElementById('content');
+
+            // Modify the inner HTML of the selected element
+            contentDiv.innerHTML = `
+                <h2>Updated Content</h2>
+                <p>This content has been updated using JavaScript's innerHTML property.</p>
+            `;
+        }
+    </script>
+    
+</body>
+</html>

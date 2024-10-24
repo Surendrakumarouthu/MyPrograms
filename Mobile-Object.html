@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile-Object Table</title>
+    <style>
+        table,th,td {
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <script>
+        function Mobile(mobilename,mobileprice,mobilecompany,mobileReleaseDate){
+            this.mobilename=mobilename;
+            this.mobileprice=mobileprice;
+            this.mobilecompany=mobilecompany
+            this.mobileReleaseDate=mobileReleaseDate;
+
+        }
+        let m1 = new Mobile("iPhone 14", 999, "Apple", "2023-09-14");
+         let m2 = new Mobile("Galaxy S23", 849, "Samsung", "2023-02-01");
+         let m3 = new Mobile("Pixel 7", 599, "Google", "2022-10-13");
+        var Mobiles=[m1,m2,m3];
+        console.log(m1);
+        console.log(m2);
+        console.log(m3)
+        console.log(Mobiles);
+        var minprice=+prompt("Enter you mobile Price")
+        var filteredMobiles=Mobiles.filter((mbl=>mbl.mobileprice>minprice))
+        console.log(filteredMobiles);
+        
+        var str=`<table><tr><th>MobileName</th><th>Mobile Price</th><th>Mobile Company</th><th>Release Date</th></tr>`
+            for(let mobile of Mobiles){
+                str+=`<tr><td>${mobile.mobilename}</td><td>${mobile.mobileprice}</td><td>${mobile.mobilecompany}</td><td>${mobile.mobileReleaseDate}</td></tr>`
+            }
+            str+=`</table>`
+            document.write(str);
+            str1="<h2>Filtered Mobiles</h2>"
+            var str2=`<table><tr><th>MobileName</th><th>Mobile Price</th><th>Mobile Company</th><th>Release Date</th></tr>`
+            for(let mobile of filteredMobiles){
+                str2+=`<tr><td>${mobile.mobilename}</td><td>${mobile.mobileprice}</td><td>${mobile.mobilecompany}</td><td>${mobile.mobileReleaseDate}</td></tr>`
+            }
+            str2+=`</table>`
+            document.write(str1+str2);
+    </script>
+    
+</body>
+</html>

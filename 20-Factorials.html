@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20</title>
+</head>
+<body>
+    <script>
+        // Function to calculate factorial of a number
+function factorial(n) {
+    if (n === 0 || n === 1) return 1;
+    let fact = 1;
+    for (let i = 2; i <= n; i++) {
+        fact *= i;
+    }
+    return fact;
+}
+
+// Given array of numbers
+var numbers = [0,1, 2, 3, 4, 5,6];
+
+// New array to store the factorials
+var factorials = [];
+
+// Loop through each number in the array and calculate its factorial
+for (let i = 0; i < numbers.length; i++) {
+    factorials.push(factorial(numbers[i]));
+}
+
+// Output the new array with factorials
+document.write("Factorials of each number:", factorials);
+
+    </script>
+</body>
+</html>
