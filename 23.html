@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const books = [
+  { title: 'Book A', author: 'Author 1' },
+  { title: 'Book B', author: 'Author 2' },
+  { title: 'Book C', author: 'Author 3' },
+];
+var BookTitle=prompt()
+var BookIndex=books.findIndex((book=>book.title==BookTitle))
+if(BookIndex==-1){
+    document.write("book not found")
+}
+else{
+    document.write("book found at index"+BookIndex)
+}
+
+    </script>
+</body>
+</html>

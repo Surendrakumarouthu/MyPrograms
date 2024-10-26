@@ -7,15 +7,14 @@
 </head>
 <body>
     <script>
-        num=20
-        row=4
-        for(let i=1;i<=row;i++){
-            for(let j=i;j<=row;j++){
-                document.write(num+" ")
-                num=num-2;
-            }
-            document.write("<br>")
+        var row=5;
+        for(let i=row;1<=i;i--){
+            for(let j=i;j>=1;j--){
+                document.write(j+" ");
         }
+        document.write("<br>");
+    }
+
     </script>
 </body>
 </html>

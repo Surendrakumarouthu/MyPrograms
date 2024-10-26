@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const employees = [
+  { name: 'Alice', salary: 50000 },
+  { name: 'Bob', salary: 60000 },
+  { name: 'Charlie', salary: 40000 },
+];
+ var minsalary=+prompt("Enter minimum salary")
+ var filteredEmployee=employees.filter(employee=>employee.salary>minsalary)
+//  filteredEmployee.sort((a,b)=>a.name.localeCompare(b.name))
+filteredEmployee.sort((a,b)=>b.salary-a.salary)
+ console.log(filteredEmployee);
+
+    </script>
+</body>
+</html>

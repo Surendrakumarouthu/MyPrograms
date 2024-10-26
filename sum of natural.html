@@ -7,15 +7,15 @@
 </head>
 <body>
     <script>
-        num=20
-        row=4
-        for(let i=1;i<=row;i++){
-            for(let j=i;j<=row;j++){
-                document.write(num+" ")
-                num=num-2;
-            }
-            document.write("<br>")
+        var num=+prompt("Enter any number")
+        var sum=0;
+        function SumOfNatural(num){
+            for(let i=1;i<=num;i++){
+            sum=sum+i;
         }
+        return sum;
+        }
+        document.write(SumOfNatural(num))
     </script>
 </body>
 </html>

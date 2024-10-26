@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        students = [
+  { name: 'John', age: 17 },
+  { name: 'Jane', age: 19 },
+  { name: 'Jack', age: 18 },
+];
+var updatedstudents=students.map(Add)
+function Add(student) {
+    if(student.age>=18){
+        student.isAdult=true;
+    }
+    else{
+        student.isAdult=false;
+    }
+    return student;
+}
+console.log(updatedstudents)
+    </script>
+</body>
+</html>
